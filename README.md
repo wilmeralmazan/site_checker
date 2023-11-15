@@ -1,7 +1,7 @@
 # Server Status Checker
 
 ## Overview
-This Python script, `server_status_checker.py`, is designed to quickly check the status of a web server. It attempts to establish a socket connection to a specified host and port and sends a simple HTTP HEAD request to determine if the server is online.
+This Python script, `site_checker.py`, is designed to quickly check the status of a web server. It attempts to establish a socket connection to a specified host and port and sends a simple HTTP HEAD request to determine if the server is online.
 
 ## Features
 - Simple and easy-to-use command-line interface.
