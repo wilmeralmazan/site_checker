@@ -16,17 +16,17 @@ Ensure you have Python installed on your system. This script is compatible with 
 No additional installation is required. Clone this repository to your local machine to get started.
 
 git clone https://github.com/wilmeralmazan/site_checker.git
-cd site-checker
+cd site_checker
 
 ## Usage
 Run the script from the command line by passing the host and an optional port number.
-python server_status_checker.py <host> [port]
+python site_checker.py <host> [port]
 
 - `<host>`: The hostname or IP address of the server you want to check.
 - `[port]`: Optional. The port number to connect to. Defaults to 80 if not provided.
 
 ### Example
-python server_status_checker.py example.com 80
+python site_checker.py example.com 80
 
 
 ## Error Handling
