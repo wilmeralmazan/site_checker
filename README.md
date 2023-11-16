@@ -13,20 +13,21 @@ This Python script, `site_checker.py`, is designed to quickly check the status o
 Ensure you have Python installed on your system. This script is compatible with Python 3.x.
 
 ## Installation
-No additional installation is required. Clone this repository to your local machine to get started.
+Clone this repository to your local machine to get started.
 
 git clone https://github.com/wilmeralmazan/site_checker.git
 cd site_checker
+pip install site_checker
 
 ## Usage
 Run the script from the command line by passing the host and an optional port number.
-python site_checker.py <host> [port]
+check_site <host> [port]
 
 - `<host>`: The hostname or IP address of the server you want to check.
 - `[port]`: Optional. The port number to connect to. Defaults to 80 if not provided.
 
 ### Example
-python site_checker.py example.com 80
+check_site example.com 80
 
 
 ## Error Handling
