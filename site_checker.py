@@ -7,26 +7,28 @@ server_status_checker.py
 Author: Wilmer Almazan
 Email: wilmeralmazan@gmail.com
 Date Created: November 14, 2023
-Last Modified: November 14, 2023
-Version: 1.0
+Last Modified: November 16, 2023
+Version: 1.1
 Description:
     This script checks whether a specified web server is online by attempting to
     establish a socket connection using a provided host and port. It sends a
     simple HTTP HEAD request and checks the server's response.
-
+Changelog:
+    Now using Click to improve the CLI app experience
 """
 
-import sys
 import socket
 
-# Check if the correct number of arguments are provided
-if len(sys.argv) not in [2, 3]:
-    print("Usage: script.py <host> [port]")
-else:
+import click
+
+@click.command()
+@click.argument('host',type=str, required=True)
+@click.argument('port', type=int, default=80)
+def check_site(host,port):
+    """This script checks whether a specified web server is online by attempting
+      to establish a socket connection using a provided host and port"""
+
     try:
-        host = sys.argv[1]
-        # Use a default port if not specified, otherwise convert to integer
-        port = 80 if len(sys.argv) == 2 else int(sys.argv[2])
         
         print(f"Attempting to connect to {host} on port {port}")
 
@@ -48,6 +50,8 @@ else:
         sock.shutdown(socket.SHUT_RDWR)
         sock.close()
 
+        return 0
+
     except ValueError:
         print("Port must be an integer.")
     except socket.gaierror:
@@ -56,3 +60,6 @@ else:
         print(f"Server Down - Socket Error: {e}")
     except Exception as e:
         print(f"An error occurred: {e}")
+
+if __name__ == "__main__":
+    check_site()
