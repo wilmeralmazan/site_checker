@@ -9,7 +9,7 @@ setup(
         'site_checker',
     ],
     install_requires=[
-        'click',
+        'click==8.1.7',
     ],
     entry_points={ 
         'console_scripts': [
