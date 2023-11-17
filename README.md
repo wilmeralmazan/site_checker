@@ -16,8 +16,10 @@ Ensure you have Python installed on your system. This script is compatible with 
 Clone this repository to your local machine to get started.
 
 git clone https://github.com/wilmeralmazan/site_checker.git
+
 cd site_checker
-pip install site_checker
+
+pip install requirements.txt
 
 ## Usage
 Run the script from the command line by passing the host and an optional port number.
