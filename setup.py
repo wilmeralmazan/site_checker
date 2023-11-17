@@ -3,7 +3,7 @@
 from setuptools import setup 
 
 setup(
-    name='site_check',
+    name='site_checker',
     version='1.1',
     py_modules=[
         'site_checker',
