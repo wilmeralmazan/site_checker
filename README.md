@@ -19,7 +19,7 @@ git clone https://github.com/wilmeralmazan/site_checker.git
 
 cd site_checker
 
-pip install requirements.txt
+pip install -e .
 
 ## Usage
 Run the script from the command line by passing the host and an optional port number.
