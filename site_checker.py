@@ -22,8 +22,8 @@ import socket
 import click
 
 @click.command()
-@click.argument('host',type=str, required=True)
-@click.argument('port', type=int, default=80)
+@click.option('--host','-h',type=str, required=True, help="Domain name or IPv4 address")
+@click.option('--port','-p', type=int, default=80, show_default=True, help="Port number" )
 def check_site(host,port):
     """This script checks whether a specified web server is online by attempting
       to establish a socket connection using a provided host and port"""

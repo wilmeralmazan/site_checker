@@ -23,14 +23,15 @@ pip install -e .
 
 ## Usage
 Run the script from the command line by passing the host and an optional port number.
-check_site <host> [port]
+Usage: check_site [OPTIONS]
 
-- `<host>`: The hostname or IP address of the server you want to check.
-- `[port]`: Optional. The port number to connect to. Defaults to 80 if not provided.
+Options:
+  -h, --host TEXT     Domain name or IPv4 address  [required]
+  -p, --port INTEGER  Port number  [default: 80]
+  --help              Show this message and exit.
 
 ### Example
-check_site example.com 80
-
+check_site --hostname devnetjourney.com --port 80
 
 ## Error Handling
 The script includes error handling for common issues such as:
